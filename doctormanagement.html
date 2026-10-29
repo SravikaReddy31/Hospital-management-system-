@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🏥 Doctor Management System</h1>
+        <p>Manage doctor information efficiently</p>
+    </header>
+
+    <main class="container">
+
+        <section class="form-section">
+            <h2>Add Doctor</h2>
+
+            <form id="doctorForm">
+                <label for="name">Doctor Name</label>
+                <input type="text" id="name"
+                       placeholder="Enter doctor name" required>
+
+                <label for="specialization">Specialization</label>
+                <select id="specialization" required>
+                    <option value="">Select Specialization</option>
+                    <option>Cardiologist</option>
+                    <option>Dermatologist</option>
+                    <option>Neurologist</option>
+                    <option>Orthopedic</option>
+                    <option>Pediatrician</option>
+                    <option>General Physician</option>
+                    <option>Gynecologist</option>
+                </select>
+
+                <label for="experience">Experience (Years)</label>
+                <input type="number" id="experience"
+                       min="0" max="80" placeholder="Years of experience"
+                       required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone"
+                       pattern="[0-9]{10}" maxlength="10"
+                       placeholder="10-digit phone number" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email"
+                       placeholder="doctor@example.com" required>
+
+                <label for="availability">Availability</label>
+                <select id="availability" required>
+                    <option value="">Select Availability</option>
+                    <option>Available</option>
+                    <option>Unavailable</option>
+                </select>
+
+                <button type="submit">Add Doctor</button>
+            </form>
+        </section>
+
+        <section class="records-section">
+            <h2>Doctor Records</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Specialization</th>
+                            <th>Experience</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Availability</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="doctorList"></tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
