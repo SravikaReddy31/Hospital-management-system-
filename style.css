@@ -1,0 +1,166 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #087e8b;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Form and records sections */
+.form-section,
+.records-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #087e8b;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+/* Form */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+}
+
+label {
+    font-weight: bold;
+    align-self: end;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: white;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #087e8b;
+    border-color: transparent;
+}
+
+form button {
+    grid-column: 1 / -1;
+}
+
+/* Buttons */
+button {
+    background: #087e8b;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #05616b;
+}
+
+/* Table */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    min-width: 750px;
+}
+
+th,
+td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background: #087e8b;
+    color: white;
+}
+
+tbody tr:hover {
+    background: #f0fdfa;
+}
+
+/* Delete button */
+.delete-btn {
+    background: #dc3545;
+    padding: 8px 12px;
+}
+
+.delete-btn:hover {
+    background: #b02a37;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    .container {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    .form-section,
+    .records-section {
+        padding: 15px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    form button {
+        grid-column: auto;
+    }
+}
